@@ -1,0 +1,3 @@
+tasks:
+  - init: ./mvnw package
+    command: 'echo "TODO: Replace with command to start project"'

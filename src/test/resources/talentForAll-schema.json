@@ -1,0 +1,941 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "People Management - Talent for all schema",
+    "description": "Talent For All Schema for People Management Datamart",
+    "default": {},
+    "required": [
+        "coWorker"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "coWorker": {
+            "$id": "#/properties/coWorker",
+            "type": "object",
+            "title": "The coWorker schema",
+            "description": "Coworker being the top level entity. Multiplte heterogenoeus entities could exist under it.",
+            "default": {},
+            "required": [
+                "coWorkerGlobalId",
+                "coWorkerTalent"
+            ],
+            "additionalProperties": true,
+            "properties": {
+                "coWorkerGlobalId": {
+                    "$id": "#/properties/coWorker/properties/coWorkerGlobalId",
+                    "type": "string",
+                    "title": "The coWorkerGlobalId schema",
+                    "description": "The global id of coworker which is unique across platforms",
+                    "default": ""
+                },
+                "coWorkerTalent": {
+                    "$id": "#/properties/coWorker/properties/coWorkerTalent",
+                    "type": "object",
+                    "title": "The coWorkerTalent schema",
+                    "description": "This is the Talent for all data start",
+                    "default": {},
+                    "required": [
+                        "coWorkerLocalId",
+                        "coWorkerGlobalId",
+                        "fiscalYear",
+                        "organization",
+                        "country",
+                        "unit",
+                        "lineManagerLocalId",
+                        "matrixManagerLocalId"
+                    ],
+                    "additionalProperties": true,
+                    "properties": {
+                        "coWorkerLocalId": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/coWorkerLocalId",
+                            "type": "string",
+                            "title": "The coWorkerLocalId schema",
+                            "description": "The local cowrker id for unique per country",
+                            "default": ""
+                        },
+                        "coWorkerGlobalId": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/coWorkerGlobalId",
+                            "type": "string",
+                            "title": "The coWorkerGlobalId schema",
+                            "description": "The global id of coworker which is unique across platforms",
+                            "default": ""
+                        },
+                        "fiscalYear": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/fiscalYear",
+                            "type": "string",
+                            "title": "The fiscalYear schema",
+                            "description": "The talent review for specific year",
+                            "default": ""
+                        },
+                        "organization": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/organization",
+                            "type": "string",
+                            "title": "The organization schema",
+                            "description": "The specific Ikea organization",
+                            "default": ""
+                        },
+                        "country": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/country",
+                            "type": "string",
+                            "title": "The country schema",
+                            "description": "The country for which data is required",
+                            "default": ""
+                        },
+                        "unit": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/unit",
+                            "type": "string",
+                            "title": "The unit schema",
+                            "description": "The business unit.",
+                            "default": ""
+                        },
+                        "workArea": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/workArea",
+                            "type": "string",
+                            "title": "The workArea schema",
+                            "description": "Specific work are under business unit",
+                            "default": ""
+                        },
+                        "jobCompetenceProfile": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/jobCompetenceProfile",
+                            "type": "string",
+                            "title": "The jobCompetenceProfile schema",
+                            "description": "",
+                            "default": ""
+                        },
+                        "leadershipLevel": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/leadershipLevel",
+                            "type": "string",
+                            "title": "The leadershipLevel schema",
+                            "description": "Leadership seniority level of the employee",
+                            "default": ""
+                        },
+                        "jobTitle": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/jobTitle",
+                            "type": "string",
+                            "title": "The jobTitle schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": ""
+                        },
+                        "position": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/position",
+                            "type": "string",
+                            "title": "The position schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": ""
+                        },
+                        "timeInPosition": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/timeInPosition",
+                            "type": "string",
+                            "title": "The timeInPosition schema",
+                            "description": "TODO: What is the time variable here [year, month or days?]",
+                            "default": ""
+                        },
+                        "lineManagerLocalId": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/lineManagerLocalId",
+                            "type": "string",
+                            "title": "The lineManagerLocalId schema",
+                            "description": "Line manager local id who has done the appraisal",
+                            "default": ""
+                        },
+                        "matrixManagerLocalId": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/matrixManagerLocalId",
+                            "type": "string",
+                            "title": "The matrixManagerLocalId schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": ""
+                        },
+                        "tooNewToEvaluate": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/tooNewToEvaluate",
+                            "type": "string",
+                            "title": "The tooNewToEvaluate schema",
+                            "description": "Coworker has just joined and cannot be evaluated.",
+                            "default": ""
+                        },
+                        "performanceAndDevelopment": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment",
+                            "type": "object",
+                            "title": "The performanceAndDevelopment schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "required": [],
+                            "additionalProperties": true,
+                            "properties": {
+                                "jobChats": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/jobChats",
+                                    "type": "array",
+                                    "title": "The jobChats schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/jobChats/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "date": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/jobChats/items/anyOf/0/properties/date",
+                                                        "type": "string",
+                                                        "title": "The date schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "commentsAndActions": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/jobChats/items/anyOf/0/properties/commentsAndActions",
+                                                        "type": "string",
+                                                        "title": "The commentsAndActions schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/jobChats/items"
+                                    }
+                                },
+                                "welcomeMessage": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/welcomeMessage",
+                                    "type": "string",
+                                    "title": "The welcomeMessage schema",
+                                    "description": "TODO: Confirm - The welcome message, usually set by manager for coworker.",
+                                    "default": ""
+                                },
+                                "postponeTalk": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/postponeTalk",
+                                    "type": "object",
+                                    "title": "The postponeTalk schema",
+                                    "description": "IF the appraisal discussion has been postponed.",
+                                    "default": {},
+                                    "required": [
+                                        "postponeDate"
+                                    ],
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "postponeFlag": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/postponeTalk/properties/postponeFlag",
+                                            "type": "string",
+                                            "title": "The postponeFlag schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "postponeReason": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/postponeTalk/properties/postponeReason",
+                                            "type": "string",
+                                            "title": "The postponeReason schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "postponeDate": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/postponeTalk/properties/postponeDate",
+                                            "type": "string",
+                                            "title": "The postponeDate schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        }
+                                    }
+                                },
+                                "assignments": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments",
+                                    "type": "array",
+                                    "title": "The assignments schema",
+                                    "description": "Different assignments for the coworker.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "assignmentDesc": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0/properties/assignmentDesc",
+                                                        "type": "string",
+                                                        "title": "The assignmentDesc schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0/properties/lineManagerComment",
+                                                        "type": "string",
+                                                        "title": "The lineManagerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0/properties/coWorkerComment",
+                                                        "type": "string",
+                                                        "title": "The coWorkerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0/properties/lineManagerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The lineManagerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items/anyOf/0/properties/coWorkerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The coWorkerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/assignments/items"
+                                    }
+                                },
+                                "leadershipCapabilites": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites",
+                                    "type": "array",
+                                    "title": "The leadershipCapabilites schema",
+                                    "description": "Coworkers leadership quality description.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "capabilityDesc": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0/properties/capabilityDesc",
+                                                        "type": "string",
+                                                        "title": "The capabilityDesc schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0/properties/lineManagerComment",
+                                                        "type": "string",
+                                                        "title": "The lineManagerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0/properties/coWorkerComment",
+                                                        "type": "string",
+                                                        "title": "The coWorkerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0/properties/lineManagerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The lineManagerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items/anyOf/0/properties/coWorkerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The coWorkerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/leadershipCapabilites/items"
+                                    }
+                                },
+                                "goals": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals",
+                                    "type": "array",
+                                    "title": "The goals schema",
+                                    "description": "Goals settings - Description, weightage, evaluation and time to complete.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "goalDesc": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/goalDesc",
+                                                        "type": "string",
+                                                        "title": "The goalDesc schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "weight": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/weight",
+                                                        "type": "string",
+                                                        "title": "The weight schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "exceedExpectationsNorm": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/exceedExpectationsNorm",
+                                                        "type": "string",
+                                                        "title": "The exceedExpectationsNorm schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "meetsExpectationsNorm": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/meetsExpectationsNorm",
+                                                        "type": "string",
+                                                        "title": "The meetsExpectationsNorm schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "partlyMeetsExpectationsNorm": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/partlyMeetsExpectationsNorm",
+                                                        "type": "string",
+                                                        "title": "The partlyMeetsExpectationsNorm schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "belowExpectationsNorm": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/belowExpectationsNorm",
+                                                        "type": "string",
+                                                        "title": "The belowExpectationsNorm schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "deadline": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/deadline",
+                                                        "type": "string",
+                                                        "title": "The deadline schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/lineManagerComment",
+                                                        "type": "string",
+                                                        "title": "The lineManagerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/coWorkerComment",
+                                                        "type": "string",
+                                                        "title": "The coWorkerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/lineManagerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The lineManagerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerEvaluation": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items/anyOf/0/properties/coWorkerEvaluation",
+                                                        "type": "string",
+                                                        "title": "The coWorkerEvaluation schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/goals/items"
+                                    }
+                                },
+                                "ikeaValues": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/ikeaValues",
+                                    "type": "object",
+                                    "title": "The ikeaValues schema",
+                                    "description": "TODO: Does each Ikea value separate evaluation is done ? Evaluation on IKEA values.",
+                                    "default": {},
+                                    "required": [],
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "lineManagerComment": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/ikeaValues/properties/lineManagerComment",
+                                            "type": "string",
+                                            "title": "The lineManagerComment schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "coWorkerComment": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/ikeaValues/properties/coWorkerComment",
+                                            "type": "string",
+                                            "title": "The coWorkerComment schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "lineManagerEvaluation": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/ikeaValues/properties/lineManagerEvaluation",
+                                            "type": "string",
+                                            "title": "The lineManagerEvaluation schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "coWorkerEvaluation": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/ikeaValues/properties/coWorkerEvaluation",
+                                            "type": "string",
+                                            "title": "The coWorkerEvaluation schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        }
+                                    }
+                                },
+                                "strengthAndDevelopmentAreas": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/strengthAndDevelopmentAreas",
+                                    "type": "string",
+                                    "title": "The strengthAndDevelopmentAreas schema",
+                                    "description": "TODO: IS this also a complex object.",
+                                    "default": ""
+                                },
+                                "performanceDevelopmentPlan": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan",
+                                    "type": "array",
+                                    "title": "The performanceDevelopmentPlan schema",
+                                    "description": "Evaluation on performance development plan for the employee.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "developmentArea": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/developmentArea",
+                                                        "type": "string",
+                                                        "title": "The developmentArea schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "training": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/training",
+                                                        "type": "string",
+                                                        "title": "The training schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "smartGoal": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/smartGoal",
+                                                        "type": "string",
+                                                        "title": "The smartGoal schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "actions": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/actions",
+                                                        "type": "string",
+                                                        "title": "The actions schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "resourcesToSupportYou": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/resourcesToSupportYou",
+                                                        "type": "string",
+                                                        "title": "The resourcesToSupportYou schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "howDoYouMeasureProgress": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/howDoYouMeasureProgress",
+                                                        "type": "string",
+                                                        "title": "The howDoYouMeasureProgress schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "startDate": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/startDate",
+                                                        "type": "string",
+                                                        "title": "The startDate schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "endDate": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/endDate",
+                                                        "type": "string",
+                                                        "title": "The endDate schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerStatus": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/lineManagerStatus",
+                                                        "type": "string",
+                                                        "title": "The lineManagerStatus schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWokerStatus": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/coWokerStatus",
+                                                        "type": "string",
+                                                        "title": "The coWokerStatus schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/lineManagerComment",
+                                                        "type": "string",
+                                                        "title": "The lineManagerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items/anyOf/0/properties/coWorkerComment",
+                                                        "type": "string",
+                                                        "title": "The coWorkerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/performanceDevelopmentPlan/items"
+                                    }
+                                },
+                                "lineManagerPerformanceResult": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/lineManagerPerformanceResult",
+                                    "type": "string",
+                                    "title": "The lineManagerPerformanceResult schema",
+                                    "description": "Line manager performance evaluation.",
+                                    "default": ""
+                                },
+                                "coWorkerPerformanceSimulation": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/coWorkerPerformanceSimulation",
+                                    "type": "string",
+                                    "title": "The coWorkerPerformanceSimulation schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "lineManagerPerformanceComment": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/lineManagerPerformanceComment",
+                                    "type": "string",
+                                    "title": "The lineManagerPerformanceComment schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "coWorkerPerformanceComment": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/coWorkerPerformanceComment",
+                                    "type": "string",
+                                    "title": "The coWorkerPerformanceComment schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "feedbackToManager": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/performanceAndDevelopment/properties/feedbackToManager",
+                                    "type": "string",
+                                    "title": "The feedbackToManager schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                }
+                            }
+                        },
+                        "talentReview": {
+                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview",
+                            "type": "object",
+                            "title": "The talentReview schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "required": [],
+                            "additionalProperties": true,
+                            "properties": {
+                                "lineManagerPerformanceInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/lineManagerPerformanceInput",
+                                    "type": "string",
+                                    "title": "The lineManagerPerformanceInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "lineManagerPotentialInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/lineManagerPotentialInput",
+                                    "type": "string",
+                                    "title": "The lineManagerPotentialInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "lineManagerComment": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/lineManagerComment",
+                                    "type": "string",
+                                    "title": "The lineManagerComment schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "coWorkerPerformanceInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/coWorkerPerformanceInput",
+                                    "type": "string",
+                                    "title": "The coWorkerPerformanceInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "coWorkerPotentialInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/coWorkerPotentialInput",
+                                    "type": "string",
+                                    "title": "The coWorkerPotentialInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "coWorkerComment": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/coWorkerComment",
+                                    "type": "string",
+                                    "title": "The coWorkerComment schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "matrixManagerPerformanceInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/matrixManagerPerformanceInput",
+                                    "type": "string",
+                                    "title": "The matrixManagerPerformanceInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "matrixManagerPotentialInput": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/matrixManagerPotentialInput",
+                                    "type": "string",
+                                    "title": "The matrixManagerPotentialInput schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "matrixManagerComment": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/matrixManagerComment",
+                                    "type": "string",
+                                    "title": "The matrixManagerComment schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "leadershipIndex": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/leadershipIndex",
+                                    "type": "string",
+                                    "title": "The leadershipIndex schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "positionSuccessor": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor",
+                                    "type": "array",
+                                    "title": "The positionSuccessor schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "timing": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor/items/anyOf/0/properties/timing",
+                                                        "type": "string",
+                                                        "title": "The timing schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "successorInternalId": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor/items/anyOf/0/properties/successorInternalId",
+                                                        "type": "string",
+                                                        "title": "The successorInternalId schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "successorExternal": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor/items/anyOf/0/properties/successorExternal",
+                                                        "type": "string",
+                                                        "title": "The successorExternal schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/positionSuccessor/items"
+                                    }
+                                },
+                                "possibleNextPosition": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition",
+                                    "type": "array",
+                                    "title": "The possibleNextPosition schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "position": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/position",
+                                                        "type": "string",
+                                                        "title": "The position schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "timming": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/timming",
+                                                        "type": "string",
+                                                        "title": "The timming schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "organization": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/organization",
+                                                        "type": "string",
+                                                        "title": "The organization schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "level": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/level",
+                                                        "type": "string",
+                                                        "title": "The level schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "workArea": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/workArea",
+                                                        "type": "string",
+                                                        "title": "The workArea schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "type": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/type",
+                                                        "type": "string",
+                                                        "title": "The type schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "location": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/location",
+                                                        "type": "string",
+                                                        "title": "The location schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "lineManagerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/lineManagerComment",
+                                                        "type": "string",
+                                                        "title": "The lineManagerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    },
+                                                    "coWorkerComment": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items/anyOf/0/properties/coWorkerComment",
+                                                        "type": "string",
+                                                        "title": "The coWorkerComment schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/possibleNextPosition/items"
+                                    }
+                                },
+                                "mobility": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/mobility",
+                                    "type": "object",
+                                    "title": "The mobility schema",
+                                    "description": "TODO: confirm - Is the coworker job profile requires travelling?.",
+                                    "default": {},
+                                    "required": [],
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "mobilityChoice": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/mobility/properties/mobilityChoice",
+                                            "type": "string",
+                                            "title": "The mobilityChoice schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        },
+                                        "mobilityComments": {
+                                            "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/mobility/properties/mobilityComments",
+                                            "type": "string",
+                                            "title": "The mobilityComments schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        }
+                                    }
+                                },
+                                "currentlyEnrolledIn": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/currentlyEnrolledIn",
+                                    "type": "array",
+                                    "title": "The currentlyEnrolledIn schema",
+                                    "description": "TODO: is history maintained? Currently enrolled trainings.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/currentlyEnrolledIn/items/anyOf/0",
+                                                "type": "object",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": {},
+                                                "required": [],
+                                                "additionalProperties": true,
+                                                "properties": {
+                                                    "training": {
+                                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/currentlyEnrolledIn/items/anyOf/0/properties/training",
+                                                        "type": "string",
+                                                        "title": "The training schema",
+                                                        "description": "An explanation about the purpose of this instance.",
+                                                        "default": ""
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/currentlyEnrolledIn/items"
+                                    }
+                                },
+                                "staircase": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/staircase",
+                                    "type": "string",
+                                    "title": "The staircase schema",
+                                    "description": "TODO: What does this signify.",
+                                    "default": ""
+                                },
+                                "exitRisk": {
+                                    "$id": "#/properties/coWorker/properties/coWorkerTalent/properties/talentReview/properties/exitRisk",
+                                    "type": "string",
+                                    "title": "The exitRisk schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

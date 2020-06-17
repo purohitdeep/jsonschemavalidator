@@ -1,0 +1,191 @@
+{
+    "coWorker": {
+        "coWorkerGlobalId": "5678e4567",
+        "coWorkerTalent": {
+            "coWorkerLocalId": "5678e4567",
+            "coWorkerGlobalId": "5678e4567",
+            "fiscalYear": "2018",
+            "organization": "tba",
+            "country": "PL",
+            "unit": "TBA",
+            "workArea": "TBA",
+            "jobCompetenceProfile": "TBA",
+            "leadershipLevel": "TBA",
+            "jobTitle": "TBA",
+            "position": "TBA",
+            "timeInPosition": "TBA",
+            "lineManagerLocalId": "TBA",
+            "matrixManagerLocalId": "TBA",
+            "tooNewToEvaluate": "TBA",
+            "performanceAndDevelopment": {
+                "jobChats": [
+                    {
+                        "date": "2018-12-24",
+                        "commentsAndActions": "tba"
+                    },
+                    {
+                        "date": "2018-12-24",
+                        "commentsAndActions": "tba"
+                    }
+                ],
+                "welcomeMessage": "Welcome",
+                "postponeTalk": {
+                    "postponeFlag": "tba",
+                    "postponeReason": "tba",
+                    "postponeDate": "2018-12-24"
+                },
+                "assignments": [
+                    {
+                        "assignmentDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    },
+                    {
+                        "assignmentDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    }
+                ],
+                "leadershipCapabilites": [
+                    {
+                        "capabilityDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    },
+                    {
+                        "capabilityDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    }
+                ],
+                "goals": [
+                    {
+                        "goalDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    },
+                    {
+                        "goalDesc": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba",
+                        "lineManagerEvaluation": "tba",
+                        "coWorkerEvaluation": "tba"
+                    }
+                ],
+                "ikeaValues": {
+                    "lineManagerComment": "tba",
+                    "coWorkerComment": "tba",
+                    "lineManagerEvaluation": "tba",
+                    "coWorkerEvaluation": "tba"
+                },
+                "strengthAndDevelopmentAreas": "tba",
+                "performanceDevelopmentPlan": [
+                    {
+                        "developmentArea": "tba",
+                        "training": "tba",
+                        "smartGoal": "tba",
+                        "actions": "tba",
+                        "resourcesToSupportYou": "tba",
+                        "howDoYouMeasureProgress": "tba",
+                        "startDate": "tba",
+                        "endDate": "tba",
+                        "lineManagerStatus": "tba",
+                        "coWokerStatus": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba"
+                    },
+                    {
+                        "developmentArea": "tba",
+                        "training": "tba",
+                        "smartGoal": "tba",
+                        "actions": "tba",
+                        "resourcesToSupportYou": "tba",
+                        "howDoYouMeasureProgress": "tba",
+                        "startDate": "tba",
+                        "endDate": "tba",
+                        "lineManagerStatus": "tba",
+                        "coWokerStatus": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba"
+                    }
+                ],
+                "lineManagerPerformanceResult": "tba",
+                "coWorkerPerformanceSimulation": "tba",
+                "lineManagerPerformanceComment": "tba",
+                "coWorkerPerformanceComment": "tba",
+                "feedbackToManager": "tba"
+            },
+            "talentReview": {
+                "lineManagerPerformanceInput": "tba",
+                "lineManagerPotentialInput": "tba",
+                "lineManagerComment": "tba",
+                "coWorkerPerformanceInput": "tba",
+                "coWorkerPotentialInput": "tba",
+                "coWorkerComment": "tba",
+                "matrixManagerPerformanceInput": "tba",
+                "matrixManagerPotentialInput": "tba",
+                "matrixManagerComment": "tba",
+                "positionSuccessor": [
+                    {
+                        "timing": "tba",
+                        "successorInternalId": "tba",
+                        "successorExternal": "tba"
+                    },
+                    {
+                        "timing": "tba",
+                        "successorInternalId": "tba",
+                        "successorExternal": "tba"
+                    }
+                ],
+                "possibleNextPosition": [
+                    {
+                        "position": "tba",
+                        "timming": "tba",
+                        "organization": "tba",
+                        "level": "tba",
+                        "workArea": "tba",
+                        "type": "tba",
+                        "location": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba"
+                    },
+                    {
+                        "position": "tba",
+                        "timming": "tba",
+                        "organization": "tba",
+                        "level": "tba",
+                        "workArea": "tba",
+                        "type": "tba",
+                        "location": "tba",
+                        "lineManagerComment": "tba",
+                        "coWorkerComment": "tba"
+                    }
+                ],
+                "mobility": {
+                    "mobilityChoice": "tba",
+                    "mobilityComments": "tba"
+                },
+                "currentlyEnrolledIn": [
+                    {
+                        "training": "tba"
+                    },
+                    {
+                        "training": "tba"
+                    }
+                ],
+                "staircase": "tba",
+                "exitRisk": "tba"
+            }
+        }
+    }
+}
