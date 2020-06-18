@@ -1,0 +1,166 @@
+#####################################################
+# Talent For All to People Management Data hub
+# Data Schema 
+# 
+# This is proposed YAML file for the data schema
+# 
+# Version: 0.1
+#####################################################
+
+# Coworker being the top level entity. Multiplte heterogenoeus entities could exist under it.
+coWorker:
+    coWorkerGlobalId: 5678e4567 # The global id of coworker which is unique across platforms
+    coWorkerTalent: # This is the Talent for all data start
+      coWorkerLocalId: 5678e4567 # The local cowrker id for unique per country
+      coWorkerGlobalId: 5678e4567 # The global id of coworker which is unique across platforms
+      fiscalYear: '2018' # The talent review for specific year
+      organization: tba # The specific Ikea organization
+      country: PL # The country for which data is required
+      unit: TBA # The business unit
+      workArea: TBA # Specific work are under business unit
+      jobCompetenceProfile: TBA 
+      leadershipLevel: TBA # Leadership seniority level of the employee
+      jobTitle: TBA 
+      position: TBA 
+      timeInPosition: TBA # TODO: What is the time variable here [year, month or days?]
+      lineManagerLocalId: TBA # Line manager local id who has done the appraisal
+      matrixManagerLocalId: TBA
+      tooNewToEvaluate: TBA # Coworker has just joined and cannot be evaluated
+      performanceAndDevelopment:
+        jobChats:
+        - date: '2018-12-24'
+          commentsAndActions: tba
+        - date: '2018-12-24'
+          commentsAndActions: tba
+        welcomeMessage: Welcome # TODO: Confirm - The welcome message, usually set by manager for coworker
+        postponeTalk: # IF the appraisal discussion has been postponed
+          postponeFlag: tba
+          postponeReason: tba
+          postponeDate: '2018-12-24'
+        assignments: # Different assignments for the coworker
+        - assignmentDesc: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        - assignmentDesc: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        leadershipCapabilites: # Coworkers leadership quality description
+        - capabilityDesc: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        - capabilityDesc: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        goals: # Goals settings - Description, weightage, evaluation and time to complete
+        - goalDesc: tba
+          weight: tba
+          exceedExpectationsNorm: tba
+          meetsExpectationsNorm: tba
+          partlyMeetsExpectationsNorm: tba
+          belowExpectationsNorm: tba
+          deadline: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        - goalDesc: tba
+          weight: tba
+          exceedExpectationsNorm: tba
+          meetsExpectationsNorm: tba
+          partlyMeetsExpectationsNorm: tba
+          belowExpectationsNorm: tba
+          deadline: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        ikeaValues: # TODO: Does each Ikea value separate evaluation is done ? Evaluation on IKEA values
+          lineManagerComment: tba
+          coWorkerComment: tba
+          lineManagerEvaluation: tba
+          coWorkerEvaluation: tba
+        strengthAndDevelopmentAreas: tba # TODO: IS this also a complex object
+        performanceDevelopmentPlan: # Evaluation on performance development plan for the employee
+        - developmentArea: tba
+          training: tba
+          smartGoal: tba
+          actions: tba
+          resourcesToSupportYou: tba
+          howDoYouMeasureProgress: tba
+          startDate: tba
+          endDate: tba
+          lineManagerStatus: tba
+          coWokerStatus: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+        - developmentArea: tba
+          training: tba
+          smartGoal: tba
+          actions: tba
+          resourcesToSupportYou: tba
+          howDoYouMeasureProgress: tba
+          startDate: tba
+          endDate: tba
+          lineManagerStatus: tba
+          coWokerStatus: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+        lineManagerPerformanceResult: tba # Line manager performance evaluation
+        coWorkerPerformanceSimulation: tba
+        lineManagerPerformanceComment: tba
+        coWorkerPerformanceComment: tba
+        feedbackToManager: tba
+      talentReview:
+        lineManagerPerformanceInput: tba
+        lineManagerPotentialInput: tba
+        lineManagerComment: tba
+        coWorkerPerformanceInput: tba
+        coWorkerPotentialInput: tba
+        coWorkerComment: tba
+        matrixManagerPerformanceInput: tba
+        matrixManagerPotentialInput: tba
+        matrixManagerComment: tba
+        leadershipIndex: tba
+        positionSuccessor:
+        - timing: tba
+          successorInternalId: tba
+          successorExternal: tba
+        - timing: tba
+          successorInternalId: tba
+          successorExternal: tba
+        possibleNextPosition:
+        - position: tba
+          timming: tba
+          organization: tba
+          level: tba
+          workArea: tba
+          type: tba
+          location: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+        - position: tba
+          timming: tba
+          organization: tba
+          level: tba
+          workArea: tba
+          type: tba
+          location: tba
+          lineManagerComment: tba
+          coWorkerComment: tba
+        mobility: # TODO: confirm - Is the coworker job profile requires travelling?
+          mobilityChoice: tba
+          mobilityComments: tba
+        currentlyEnrolledIn: # TODO: is history maintained? Currently enrolled trainings
+        - training: tba
+        - training: tba
+        staircase: tba # TODO: What does this signify
+        exitRisk: tba
+  
